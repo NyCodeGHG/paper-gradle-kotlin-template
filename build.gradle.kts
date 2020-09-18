@@ -16,9 +16,11 @@ repositories {
     papermc()
 }
 
+val minecraft_version: String by project
+
 dependencies {
     // PaperMC Dependency
-    compileOnly(paper())
+    compileOnly(paper(minecraft_version))
 
     // Add your dependencies here
     // Examples
@@ -30,6 +32,7 @@ dependencies {
 spigot {
     name = "ExamplePlugin"
     authors = listOf("Me")
+    apiVersion = "1.16"
     commands {
         // Example command
         create("example") {
