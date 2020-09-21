@@ -24,8 +24,8 @@ dependencies {
 
     // Add your dependencies here
     // Examples
-    // implementation("io.ktor:ktor-client:1.4.0") // Would be shaded into the final jar
-    // compileOnly("io.ktor:ktor-client:1.4.0") // Only used on compile time
+    // implementation("io.ktor", "ktor-client", "1.4.0") // Would be shaded into the final jar
+    // compileOnly("io.ktor", "ktor-client", "1.4.0") // Only used on compile time
 }
 
 // This is your plugin.yml
@@ -38,7 +38,7 @@ spigot {
         create("example") {
             description = "Example command"
             permission = "example.permission"
-            aliases = listOf()
+            aliases = emptyList()
         }
     }
 }
@@ -49,7 +49,7 @@ tasks {
         enabled = false
     }
     build {
-        dependsOn("shadowJar")
+        dependsOn(shadowJar)
     }
 }
 
