@@ -4,16 +4,15 @@ import org.apache.tools.ant.filters.ReplaceTokens
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.21"
-    id("com.github.johnrengelman.shadow") version "6.1.0"
-    id("com.github.gmazzo.buildconfig") version "2.0.2"
+    kotlin("jvm") version "1.5.10"
+    id("com.github.johnrengelman.shadow") version "7.0.0"
+    id("com.github.gmazzo.buildconfig") version "3.0.0"
 }
 
 group = "org.example"
 version = "1.0.0"
 
 repositories {
-    jcenter()
     maven(url = "https://papermc.io/repo/repository/maven-public/")
 }
 
